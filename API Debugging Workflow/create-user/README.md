@@ -26,7 +26,8 @@ Creates a new user record.
   "phoneNumber": "0501234567",
   "emailAddress": "walaa@test.com",
   "dateOfBirth": "14/01/2000"
-}```
+}
+```
 
 
 ### Expected result
