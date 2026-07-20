@@ -5,7 +5,7 @@
 **Method:** `POST`  
 **Endpoint:** `{{baseUrl}}/api/users`
 
-baseurl = https://444c91f9-98ec-494b-9459-2363cd2e78f0.mock.pstmn.io
+**Base URL:** `https://444c91f9-98ec-494b-9459-2363cd2e78f0.mock.pstmn.io`
 
 ### Purpose
 Creates a new user record.
@@ -31,7 +31,7 @@ Creates a new user record.
 
 
 ### Expected result
-The API returns `200 Created` and creates a new user record.
+The API returns `200 OK` and creates a new user record.
 
 ### Postman location
 Create User → 2xx - Success → 200 - Created - Create User
