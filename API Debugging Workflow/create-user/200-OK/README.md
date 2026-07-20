@@ -34,7 +34,7 @@ Creates a new user record.
 The API returns `200 OK` and creates a new user record.
 
 ### Postman location
-Create User → 2xx - Success → 200 - Created - Create User
+Create User → 2xx - Success → 200 - OK - Create User
 
 ![Create User — request headers](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/create-user/200-OK/create%20user-200-headers.png)
 
