@@ -36,7 +36,6 @@ The API returns `201 Created` and creates a new user record.
 ### Postman location
 Create User → 2xx - Success → 201 - Created - Create User
 
-![Create User — request headers]([./create-user-201-headers.png](https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/create-user/201%20-%20created/create%20user-201-headers.png))
+![Create User — request headers](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/create-user/201%20-%20created/create%20user-201-headers.png)
 
-![Create User — 201 response]([./create-user-201.png](https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/create-user/201%20-%20created/create%20user-201.png))
-
+![Create User — 201 response](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/create-user/201%20-%20created/create%20user-201.png)
