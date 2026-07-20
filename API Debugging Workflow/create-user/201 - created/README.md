@@ -36,3 +36,6 @@ The API returns `201 Created` and creates a new user record.
 ### Postman location
 Create User → 2xx - Success → 201 - Created - Create User
 
+![Request headers](create-user-201-headers.png)
+![201 response](create-user-201.png)
+
