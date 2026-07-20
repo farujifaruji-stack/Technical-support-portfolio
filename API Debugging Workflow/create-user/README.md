@@ -34,4 +34,4 @@ Creates a new user record.
 The API returns `201 Created` and creates a new user record.
 
 ### Postman location
-`Create User → 2xx - Success → 201 - Created - Create User`
+Create User → 2xx - Success → 201 - Created - Create User
