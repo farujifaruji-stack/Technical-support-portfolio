@@ -1,3 +1,6 @@
+> **Note:** This Jira ticket is a simulated portfolio artifact demonstrating issue documentation, investigation updates, and resolution tracking.
+
+
 # Create User — 400 Bad Request
 
 ## Scenario
