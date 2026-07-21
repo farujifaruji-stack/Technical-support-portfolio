@@ -88,3 +88,4 @@ After adding `firstName`, the request completes successfully and returns `201 Cr
 A Jira bug was created to document the reproduction steps, expected and actual results, investigation, and resolution.
 
 ![Jira ticket — Create User 400 Bad Request](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/create-user/400-Bad%20request/Jira%20API%20Project%20Create%20User%20400%20Bad%20Request.png)
+
