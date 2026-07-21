@@ -7,17 +7,22 @@
 2. Reviewed the application logs.
 
 ```log
-2026-07-21T10:42:15Z INFO Create user request payload created
-2026-07-21T10:42:15Z INFO "Create" button submitted
-2026-07-21T10:42:15Z INFO Request received: POST /api/users
-2026-07-21T10:42:17Z ERROR Validation failed: firstName is required
-2026-07-21T10:42:17Z INFO Response sent: 400 Bad Request
+2026-07-21T10:38:43Z INFO  Widget is clicked
+.
+.
+.
+2026-07-21T10:42:10Z INFO  Request payload created
+2026-07-21T10:42:14Z INFO  "Create" button submitted
+2026-07-21T10:42:15Z INFO  Request received: POST /api/users
+2026-07-21T10:42:17Z ERROR Validation failed: Authentication failed: Authorization header missing
+2026-07-21T10:42:17Z INFO  Response sent: 401 Internal Server Error → 401 Unauthorized
 ```
 
 3. Reviewed the request body sent to the API and confirmed that the required `firstName` field was missing.
 
 ```json
 {
+  "firstName": "John",
   "lastName": "Doe",
   "id": "123456789",
   "phoneNumber": "0501234567",
@@ -35,17 +40,7 @@ Look up in the DB and check if there is any new custimers that were added to the
 
 5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request payload.
 
-6. Added the missing `firstName` field to the request body.
+6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
 
-```json
-{
-  "firstName": "John",
-  "lastName": "Doe",
-  "id": "123456789",
-  "phoneNumber": "0501234567",
-  "emailAddress": "walaa@test.com",
-  "dateOfBirth": "14/01/2000"
-}
-```
-
-7. Resent the request and verified that the API returned `201 Created`.
+7. Resent the requests of all affected customers and verify that the API returned `201 Created`.
+8. Leave a comment in the Jira about the fix and close the Jira.
