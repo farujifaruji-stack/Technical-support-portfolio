@@ -7,7 +7,7 @@
 2. Reviewed the application logs.
 
 ```log
-2026-07-21T10:42:15Z INFO Request payload created
+2026-07-21T10:42:15Z INFO Create user request payload created
 2026-07-21T10:42:15Z INFO "Create" button submitted
 2026-07-21T10:42:15Z INFO Request received: POST /api/users
 2026-07-21T10:42:17Z ERROR Validation failed: firstName is required
@@ -26,9 +26,16 @@
 }
 ```
 
-4. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request payload.
+4.Check the impact:
+##### To check number of impacted customers:
+Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "INFO Create user request payload created AND ERROR Validation failed: firstName is required"
 
-5. Added the missing `firstName` field to the request body.
+##### To check business impact:
+
+
+5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request payload.
+
+6. Added the missing `firstName` field to the request body.
 
 ```json
 {
@@ -41,4 +48,4 @@
 }
 ```
 
-6. Resent the request and verified that the API returned `201 Created`.
+7. Resent the request and verified that the API returned `201 Created`.
