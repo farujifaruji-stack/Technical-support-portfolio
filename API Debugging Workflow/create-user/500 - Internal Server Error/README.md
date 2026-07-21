@@ -61,17 +61,6 @@ The API returns `500 Internal Server Error`.
 - **Impacted end customers:** 48
 - **Business impact:** 100% of affected customers could not create a user between 11:00 AM and 7:00 PM.
 
-## Initial investigation
-
-The endpoint, request headers, and request body were verified. Because the request is valid but the server returns `500`, the issue requires server-side log analysis and escalation to the development or infrastructure team.
-
-## Root cause
-
-A server-side failure occurred while processing the Create User request. The exact cause must be identified through application, database, or dependent-service logs.
-
-## Resolution
-
-Escalate the issue with the request details, timestamps, response, and relevant log evidence. After the server-side issue is resolved, resend the request and verify that the API returns `201 Created`.
 
 ## Postman location
 
