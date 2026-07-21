@@ -1,1 +1,9 @@
+# SIMULATED TROUBLESHOOTING LOG — Portfolio Demonstration
+# This sanitized log is included to demonstrate API-error investigation.
+# It does not contain production data, real credentials, or live system logs.
 
+2026-07-21T10:42:15Z INFO  Request payload created
+2026-07-21T10:42:15Z INFO  "Create" button submitted
+2026-07-21T10:42:15Z INFO  Request received: POST /api/users
+2026-07-21T10:42:17Z ERROR Validation failed: firstName is required
+2026-07-21T10:42:17Z INFO  Response sent: 400 Bad Request
