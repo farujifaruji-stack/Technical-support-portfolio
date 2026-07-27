@@ -33,12 +33,12 @@
 
 4.Check the impact:
 ##### To check number of impacted customers:
-Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "INFO Create user request payload created AND ERROR Validation failed: firstName is required"
+Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "Widget is clicked AND INFO Create user request payload created AND 401 Internal Server Error → 401 Unauthorized"
 
 ##### To check business impact:
-Look up in the DB and check if there is any new custimers that were added to the DB in the time frame of the issue.
+Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
 
-5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request payload.
+5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
 
 6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
 
