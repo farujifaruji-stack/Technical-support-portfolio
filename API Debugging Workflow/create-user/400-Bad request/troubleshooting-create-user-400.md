@@ -2,7 +2,7 @@
 
 > **Note:** This is a simulated portfolio troubleshooting case. All logs and request data are sanitized and created for demonstration purposes.
 
-1. Received a customer ticket reporting that they could not create a new user.
+1. A customer submitted a support ticket reporting that they were unable to create a new user.
 
 2. Reviewed the application logs.
 
@@ -13,6 +13,7 @@
 2026-07-21T10:42:17Z ERROR Validation failed: firstName is required
 2026-07-21T10:42:17Z INFO Response sent: 400 Bad Request
 ```
+From logs look like the first name is missing in the body request.
 
 3. Reviewed the request body sent to the API and confirmed that the required `firstName` field was missing.
 
@@ -31,7 +32,8 @@
 Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "INFO Create user request payload created AND ERROR Validation failed: firstName is required"
 
 ##### To check business impact:
-Look up in the DB and check if there is any new custimers that were added to the DB in the time frame of the issue.
+Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
+If there is no new customer and comparing with previous similar hours/days it is unusual, then it affected 100% of the customers (assuming there is more than one way to add a customer)
 
 5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request payload.
 
@@ -49,3 +51,5 @@ Look up in the DB and check if there is any new custimers that were added to the
 ```
 
 7. Resent the request and verified that the API returned `201 Created`.
+   
+8. Change the body request.
