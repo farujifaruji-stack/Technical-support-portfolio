@@ -1,4 +1,4 @@
-# Troubleshooting Process — Create User 401 Unauthorized
+# Troubleshooting Process — Create User 409 Conflict
 
 > **Note:** This is a simulated portfolio troubleshooting case. All logs and request data are sanitized and created for demonstration purposes.
 
