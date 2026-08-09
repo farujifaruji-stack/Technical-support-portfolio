@@ -35,7 +35,7 @@ d
 
 4.Check the impact:
 ##### To check number of impacted customers:
-Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "Widget is clicked AND INFO Create user request payload created AND 401 Internal Server Error → 401 Unauthorized"
+Look up in logs, filter the results by project (API project in this case), and look for in the search bar for "Widget is clicked AND INFO Create user request payload created AND ERROR Authorization failed: x-api-key missing or invalid"
 
 ##### To check business impact:
 Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
@@ -43,7 +43,7 @@ Compare how much new users were added compared to similar hours and days in the 
 
 5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
 
-6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
+6. Add to the request headers: x-api-key: wf_api_2026_7f8a9c2d_debugkey.
 
 7. Resent the requests of all affected customers and verify that the API returned `201 Created`.
    
