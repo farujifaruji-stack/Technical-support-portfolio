@@ -18,7 +18,7 @@
 2026-07-21T10:42:17Z INFO  Response sent: 401 Internal Server Error → 401 Unauthorized
 ```
 
-3. Reviewed the request body sent to the API and confirmed that the required `firstName` field was missing.
+3. Reviewed the request body sent to the API and confirmed that the auth token in missing in the header.
 
 ```json
 {
@@ -37,10 +37,12 @@ Look up in logs, filter the results by project (API project in this case), and l
 
 ##### To check business impact:
 Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
+Compare how much new users were added compared to similar hours and days in the past.
 
 5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
 
 6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
 
 7. Resent the requests of all affected customers and verify that the API returned `201 Created`.
-8. Leave a comment in the Jira about the fix and close the Jira.
+   
+8. Left a comment in the Jira about the fix and close the Jira.
