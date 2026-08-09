@@ -1,4 +1,4 @@
-# Troubleshooting Process — Create User 401 Unauthorized
+# Troubleshooting Process — Create User 403 Forbidden
 
 > **Note:** This is a simulated portfolio troubleshooting case. All logs and request data are sanitized and created for demonstration purposes.
 
@@ -7,18 +7,20 @@
 2. Reviewed the application logs.
 
 ```log
-2026-07-21T10:38:43Z INFO  Widget is clicked
+2026-07-21T10:38:43Z INFO Create User widget clicked
 .
 .
 .
-2026-07-21T10:42:10Z INFO  Request payload created
-2026-07-21T10:42:14Z INFO  "Create" button submitted
-2026-07-21T10:42:15Z INFO  Request received: POST /api/users
-2026-07-21T10:42:17Z ERROR Validation failed: Authentication failed: Authorization header missing
-2026-07-21T10:42:17Z INFO  Response sent: 401 Internal Server Error → 401 Unauthorized
+2026-07-21T10:42:10Z INFO Request payload created
+2026-07-21T10:42:14Z INFO "Create" button submitted
+2026-07-21T10:42:15Z INFO Request received: POST /api/users
+2026-07-21T10:42:16Z INFO Authentication successful
+2026-07-21T10:42:17Z ERROR Authorization failed: x-api-key missing or invalid
+2026-07-21T10:42:17Z INFO Response sent: 403 Forbidden
+d
 ```
 
-3. Reviewed the request body sent to the API and confirmed that the auth token in missing in the header.
+3. Reviewed the request body and header sent to the API and confirmed that the x-api-key in missing in the header.
 
 ```json
 {
