@@ -7,8 +7,9 @@
 .
 .
 .
-2026-07-21T10:42:10Z INFO  Request payload created
-2026-07-21T10:42:14Z INFO  "Create" button submitted
-2026-07-21T10:42:15Z INFO  Request received: POST /api/users
-2026-07-21T10:42:17Z ERROR Validation failed: Authentication failed: Authorization header missing
-2026-07-21T10:42:17Z INFO  Response sent: 401 Internal Server Error → 401 Unauthorized
+2026-07-21T10:42:10Z INFO Request payload created
+2026-07-21T10:42:14Z INFO "Create" button submitted
+2026-07-21T10:42:15Z INFO Request received: POST /api/users
+2026-07-21T10:42:16Z INFO Checking for existing user: emailAddress=walaa@test.com
+2026-07-21T10:42:17Z ERROR Conflict detected: user already exists
+2026-07-21T10:42:17Z INFO Response sent: 409 Conflict
