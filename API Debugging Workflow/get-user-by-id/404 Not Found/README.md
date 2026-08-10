@@ -57,3 +57,6 @@ After correcting the user ID, resend the request and verify that the API returns
 ## Postman location
 
 `Get User by ID → 4xx - Client Errors → 404 - Not Found - Get User by ID`
+
+
+https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/get-user-by-id/404%20Not%20Found/API%20Project%20-%20Get%20User%20By%20Id%20-%20404%20Not%20Found.png
