@@ -66,4 +66,6 @@ After updating the user permissions, resend the request and verify that the API 
 
 ````
 
-![Jira ticket — Delete User 403 Forbidden](https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/delete-user/403%20-%20Forbidden/API%20Project%20-%20Create%20User%20-%20403%20Insufficient%20Permissions.png?raw=true)
+```md
+![Jira ticket — Delete User 403 Forbidden](https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/delete-user/403%20-%20Forbidden/API%20Project%20-%20Delete%20User%20-%20403%20Forbidden.png?raw=true)
+```
