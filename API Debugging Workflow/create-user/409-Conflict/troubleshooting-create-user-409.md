@@ -19,7 +19,7 @@
 2026-07-21T10:42:17Z INFO Response sent: 409 Conflict
 ```
 
-3. Reviewed the request body sent to the API and confirmed that the auth token in missing in the header.
+3. Reviewed the request body sent to the API and confirmed that the user already exists int he DB.
 
 ```json
 {
@@ -41,8 +41,6 @@ Look up in the DB and check if there is any new customers that were added to the
 Compare how much new users were added compared to similar hours and days in the past.
 
 5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
-
-6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
 
 7. No need to resend the request. Create a Jira to add a clear message for the user.
    
