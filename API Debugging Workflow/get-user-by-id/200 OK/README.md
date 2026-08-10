@@ -1,19 +1,19 @@
-# Delete User API Debugging
+# Delete User — 404 Not Found
 
-This folder documents successful and failed `Delete User` API requests for a mock User Management API.
+## Scenario
 
-> **Note:** This is a simulated portfolio project. All API requests, Jira tickets, logs, credentials, and customer data are sanitized or created for demonstration purposes.
-
-## Endpoint
+A `DELETE /api/users/{{userId}}` request returns `404 Not Found` because the specified user ID does not exist.
 
 **Method:** `DELETE`  
-**Endpoint:** `{{baseUrl}}/api/users/{{userId}}`
+**Endpoint:** `{{baseUrl}}/api/users/{{userId}}`  
+**Expected status:** `204 No Content`  
+**Actual status:** `404 Not Found`
 
 ## Purpose
 
-Demonstrates API testing and troubleshooting for user-deletion requests, including authorization checks, non-existent user records, request verification, Jira documentation, and simulated logs.
+Demonstrates investigation and resolution of a Delete User request for a non-existent user record.
 
-## Required headers
+## Request headers
 
 | Header | Value |
 |---|---|
@@ -25,46 +25,41 @@ Demonstrates API testing and troubleshooting for user-deletion requests, includi
 
 | Parameter | Description | Example |
 |---|---|---|
-| `userId` | Unique identifier of the user to delete | `123456789` |
+| `userId` | Unique identifier of the user to delete | `999999` |
 
-## Status-code coverage
+## Expected result
 
-| Status code | Scenario |
-|---|---|
-| **204 No Content** | The user record was deleted successfully. |
-| **403 Forbidden** | The authenticated user does not have permission to delete user records. |
-| **404 Not Found** | The specified user ID does not match an existing user record. |
+The API deletes an existing user record and returns `204 No Content`.
+
+## Actual result
+
+The API returns `404 Not Found`.
+
+```json
+{
+  "success": false,
+  "message": "User not found"
+}
+```
+
+## Root cause
+
+The request used a user ID that did not match an existing user record.
+
+## Resolution
+
+Confirm that the user ID is correct and that the user record exists before sending the Delete User request.
 
 ## Verification
 
-After a successful `204 No Content` response, send a `GET` request for the same user ID.
+After correcting the user ID, resend the request and verify that the API returns `204 No Content`.
 
-```text
-GET {{baseUrl}}/api/users/123456789
-```
+## Postman location
 
-The API should return `404 Not Found`, confirming that the user record was deleted.
+`Delete User → 4xx - Client Errors → 404 - Not Found - Delete User`
 
-## Evidence included
+## Jira case study
 
-Status-code folders may include:
+> **Note:** This Jira ticket is a simulated portfolio artifact demonstrating issue documentation, investigation updates, and resolution tracking.
 
-- A status-specific `README.md`
-- Postman request and response screenshots
-- Simulated Jira tickets
-- Simulated, sanitized troubleshooting logs
-- Troubleshooting or verification documentation
-
-## Postman collection
-
-Import the User Management Postman collection from the `Postman-collection` folder to run the requests.
-
-## Skills demonstrated
-
-- REST API testing with Postman
-- HTTP DELETE requests and path parameters
-- Authentication and authorization checks
-- HTTP status-code troubleshooting
-- Verification of data deletion
-- Jira issue documentation and resolution tracking
-- Log analysis and error investigation
+<!-- Add the 404 Jira screenshot here after uploading it to GitHub. -->
