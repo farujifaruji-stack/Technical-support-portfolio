@@ -1,0 +1,11 @@
+[2026-08-11 10:00:00] INFO  Request started
+[2026-08-11 10:00:00] INFO  Method: PUT
+[2026-08-11 10:00:00] INFO  Endpoint: {{baseUrl}}/api/users/200
+[2026-08-11 10:00:00] INFO  Request body: {"name":"","email":"invalid-email"}
+[2026-08-11 10:00:01] ERROR Response status: 400 Bad Request
+[2026-08-11 10:00:01] ERROR Response body: {"success":false,"message":"Invalid request data"}
+[2026-08-11 10:00:01] ERROR Cause: Missing or invalid request body fields
+[2026-08-11 10:05:00] INFO  Updated request body with valid user data
+[2026-08-11 10:05:01] INFO  Request resent
+[2026-08-11 10:05:01] INFO  Response status: 200 OK
+[2026-08-11 10:05:01] INFO  Update User request completed successfully
