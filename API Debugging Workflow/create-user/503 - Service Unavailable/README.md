@@ -1,4 +1,4 @@
-````md
+````
 # Create User — 503 Service Unavailable
 
 ## Scenario
