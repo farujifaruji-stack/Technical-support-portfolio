@@ -10,6 +10,6 @@
 2026-07-21T10:42:10Z INFO Request payload created
 2026-07-21T10:42:14Z INFO "Create" button submitted
 2026-07-21T10:42:15Z INFO Request received: POST /api/users
-2026-07-21T10:42:16Z INFO Checking for existing user: emailAddress=walaa@test.com
-2026-07-21T10:42:17Z ERROR Conflict detected: user already exists
-2026-07-21T10:42:17Z INFO Response sent: 409 Conflict
+2026-07-21T10:42:16Z WARN Rate-limit threshold exceeded: too many requests in 60 seconds
+2026-07-21T10:42:17Z INFO Response sent: 429 Too Many Requests
+2026-07-21T10:42:17Z INFO Retry-After: 60 seconds
