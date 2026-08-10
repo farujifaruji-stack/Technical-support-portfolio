@@ -40,7 +40,7 @@ Look up in logs, filter the results by project (API project in this case), and l
 Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
 Compare how much new users were added compared to similar hours and days in the past.
 
-5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
+5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an invalid email address.
 
 6. Fixed the email format and resent the request.
 
