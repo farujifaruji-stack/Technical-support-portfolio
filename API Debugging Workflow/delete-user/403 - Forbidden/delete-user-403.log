@@ -1,0 +1,12 @@
+# SIMULATED TROUBLESHOOTING LOG — Portfolio Demonstration
+# This sanitized log is included to demonstrate API-error investigation.
+# It does not contain production data, real credentials, or live system logs.
+
+2026-07-21T10:38:43Z INFO Delete User widget clicked
+# Confirmation and user-selection events omitted
+2026-07-21T10:42:10Z INFO Delete request prepared: userId=123456789
+2026-07-21T10:42:14Z INFO "Delete" button submitted
+2026-07-21T10:42:15Z INFO Request received: DELETE /api/users/123456789
+2026-07-21T10:42:16Z INFO Authentication successful
+2026-07-21T10:42:17Z ERROR Authorization failed: user does not have permission to delete users
+2026-07-21T10:42:17Z INFO Response sent: 403 Forbidden
