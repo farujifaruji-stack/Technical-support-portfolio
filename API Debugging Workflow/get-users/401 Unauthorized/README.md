@@ -51,3 +51,5 @@ After updating the authentication credentials, resend the request and verify tha
 ## Postman location
 
 `Get Users → 4xx - Client Errors → 401 - Unauthorized - Get Users`
+
+![Get Users — 401 Unauthorized](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/get-users/401%20Unauthorized/API%20Project%20-%20Get%20Users%20-%20401%20Unauthorized.png)
