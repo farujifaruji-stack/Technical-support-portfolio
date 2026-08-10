@@ -1,4 +1,4 @@
-# Troubleshooting Process — Create User 409 Conflict
+# Troubleshooting Process — Create User 503 Service Unavailable
 
 > **Note:** This is a simulated portfolio troubleshooting case. All logs and request data are sanitized and created for demonstration purposes.
 
@@ -14,13 +14,13 @@
 2026-07-21T10:42:10Z INFO Request payload created
 2026-07-21T10:42:14Z INFO "Create" button submitted
 2026-07-21T10:42:15Z INFO Request received: POST /api/users
-2026-07-21T10:42:16Z INFO Checking for existing user: emailAddress=walaa@test.com
-2026-07-21T10:42:17Z ERROR Conflict detected: user already exists
-2026-07-21T10:42:17Z INFO Response sent: 409 Conflict
+2026-07-21T10:42:16Z ERROR User service unavailable: health check failed
+2026-07-21T10:42:17Z INFO Response sent: 503 Service Unavailable
+2026-07-21T10:42:17Z INFO Retry-After: 120 seconds
 ```
 
-3. Reviewed the request body sent to the API and confirmed that the auth token in missing in the header.
-
+3. Reviewed the request headers and confirmed that the required authorization token was missing.
+4. 
 ```json
 {
   "firstName": "John",
@@ -40,10 +40,10 @@ Look up in logs, filter the results by project (API project in this case), and l
 Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
 Compare how much new users were added compared to similar hours and days in the past.
 
-5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
+5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by a missing Authorization header.
 
-6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
+6. Added `Authorization: Bearer {{apiToken}}` to the API request headers.
 
-7. No need to resend the request. Create a Jira to add a clear message for the user.
-   
-8. Left a comment in the Jira about the fix and close the Jira.
+7. Sent a corrected test request and verified that the API returned `201 Created`. Failed requests did not need to be reprocessed because no user record was created.
+
+8. Added a resolution comment to the Jira ticket and moved it to the resolved status.
