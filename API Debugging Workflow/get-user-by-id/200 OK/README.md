@@ -1,17 +1,17 @@
-# Delete User — 404 Not Found
+# Get User by ID — 200 OK
 
 ## Scenario
 
-A `DELETE /api/users/{{userId}}` request returns `404 Not Found` because the specified user ID does not exist.
+A `GET /api/users/{{userId}}` request successfully retrieves an existing user.
 
-**Method:** `DELETE`  
+**Method:** `GET`  
 **Endpoint:** `{{baseUrl}}/api/users/{{userId}}`  
-**Expected status:** `204 No Content`  
-**Actual status:** `404 Not Found`
+**Expected status:** `200 OK`  
+**Actual status:** `200 OK`
 
 ## Purpose
 
-Demonstrates investigation and resolution of a Delete User request for a non-existent user record.
+Demonstrates a successful Get User by ID request.
 
 ## Request headers
 
@@ -25,41 +25,37 @@ Demonstrates investigation and resolution of a Delete User request for a non-exi
 
 | Parameter | Description | Example |
 |---|---|---|
-| `userId` | Unique identifier of the user to delete | `999999` |
+| `userId` | Unique identifier of the user to retrieve | `200` |
 
 ## Expected result
 
-The API deletes an existing user record and returns `204 No Content`.
+The API returns the requested user record with `200 OK`.
 
 ## Actual result
 
-The API returns `404 Not Found`.
+The API returns `200 OK`.
 
 ```json
 {
-  "success": false,
-  "message": "User not found"
+  "success": true,
+  "data": {
+    "id": 200,
+    "name": "John Doe",
+    "email": "john.doe@example.com"
+  }
 }
 ```
 
-## Root cause
-
-The request used a user ID that did not match an existing user record.
-
-## Resolution
-
-Confirm that the user ID is correct and that the user record exists before sending the Delete User request.
-
 ## Verification
 
-After correcting the user ID, resend the request and verify that the API returns `204 No Content`.
+Confirm that the response contains the requested user ID and the expected user details.
 
 ## Postman location
 
-`Delete User → 4xx - Client Errors → 404 - Not Found - Delete User`
+`Get User by ID → 2xx - Success Responses → 200 - OK - Get User by ID`
 
 ## Jira case study
 
-> **Note:** This Jira ticket is a simulated portfolio artifact demonstrating issue documentation, investigation updates, and resolution tracking.
+> **Note:** This Jira ticket is a simulated portfolio artifact demonstrating successful request validation and API response documentation.
 
-<!-- Add the 404 Jira screenshot here after uploading it to GitHub. -->
+<!-- Add the 200 Jira screenshot here after uploading it to GitHub. -->
