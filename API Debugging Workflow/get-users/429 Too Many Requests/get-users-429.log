@@ -1,0 +1,11 @@
+[2026-08-11 10:00:00] INFO  Request started
+[2026-08-11 10:00:00] INFO  Method: GET
+[2026-08-11 10:00:00] INFO  Endpoint: {{baseUrl}}/api/users
+[2026-08-11 10:00:00] INFO  Authorization: Bearer {{apiToken}}
+[2026-08-11 10:00:01] ERROR Response status: 429 Too Many Requests
+[2026-08-11 10:00:01] ERROR Response body: {"success":false,"message":"Too many requests"}
+[2026-08-11 10:00:01] ERROR Cause: API rate limit exceeded
+[2026-08-11 10:05:00] INFO  Waited for the rate limit window to reset
+[2026-08-11 10:05:01] INFO  Request resent
+[2026-08-11 10:05:01] INFO  Response status: 200 OK
+[2026-08-11 10:05:01] INFO  Get Users request completed successfully
