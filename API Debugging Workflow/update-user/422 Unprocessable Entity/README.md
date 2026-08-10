@@ -63,8 +63,10 @@ Correct the invalid field values in the request body.
 
 After correcting the request body, resend the request and verify that the API returns `200 OK`
 
-![Update User — 422 Unprocessable Entity](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/update-user/422%20Unprocessable%20Entity/API%20Project%20-%20Update%20User%20-%20422%20Unprocessable%20Entity.png)
 
 ## Postman location
 
 `Update User → 4xx - Client Errors → 422 - Unprocessable Entity - Update User`
+
+
+![Update User — 422 Unprocessable Entity](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/update-user/422%20Unprocessable%20Entity/API%20Project%20-%20Update%20User%20-%20422%20Unprocessable%20Entity.png)
