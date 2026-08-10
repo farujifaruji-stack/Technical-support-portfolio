@@ -62,4 +62,4 @@ After updating the authentication credentials, resend the request and verify tha
 
 > **Note:** This Jira ticket is a simulated portfolio artifact demonstrating issue documentation, investigation updates, and resolution tracking.
 
-<!-- Add the 401 Jira screenshot here after uploading it to GitHub. -->
+![Get User by ID — 401 Unauthorized](https://raw.githubusercontent.com/farujifaruji-stack/Technical-support-portfolio/main/API%20Debugging%20Workflow/get-user-by-id/401%20Unauthorized/API%20Project%20-%20Get%20User%20BU%20Id%20-%20401%20Unauthorized.png)
