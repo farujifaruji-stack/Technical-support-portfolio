@@ -62,4 +62,4 @@ After correcting the user ID, resend the request and verify that the API returns
 
 > **Note:** This Jira ticket is a simulated portfolio artifact demonstrating issue documentation, investigation updates, and resolution tracking.
 
-<!-- Add the 404 Jira screenshot here after uploading it to GitHub. -->
+![Jira ticket — Delete User 404 Not Found](https://github.com/farujifaruji-stack/Technical-support-portfolio/blob/main/API%20Debugging%20Workflow/delete-user/404%20-%20Not%20Found/API%20Project%20-%20Delete%20User%20-%20404%20Not%20Found.png?raw=true)
