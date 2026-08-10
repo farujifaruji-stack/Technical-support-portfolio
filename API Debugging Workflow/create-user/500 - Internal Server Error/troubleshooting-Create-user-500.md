@@ -1,4 +1,4 @@
-# Troubleshooting Process — Create User 409 Conflict
+# Troubleshooting Process — Create User 500 Internal Server Error
 
 > **Note:** This is a simulated portfolio troubleshooting case. All logs and request data are sanitized and created for demonstration purposes.
 
@@ -11,12 +11,12 @@
 .
 .
 .
-2026-07-21T10:42:10Z INFO Request payload created
-2026-07-21T10:42:14Z INFO "Create" button submitted
-2026-07-21T10:42:15Z INFO Request received: POST /api/users
-2026-07-21T10:42:16Z INFO Checking for existing user: emailAddress=walaa@test.com
-2026-07-21T10:42:17Z ERROR Conflict detected: user already exists
-2026-07-21T10:42:17Z INFO Response sent: 409 Conflict
+2026-07-21T10:42:10Z INFO  Request payload created
+2026-07-21T10:42:14Z INFO  "Create" button submitted
+2026-07-21T10:42:15Z INFO  Request received: POST /api/users
+2026-07-21T10:42:15Z INFO  Data is successfully saved in the DB
+2026-07-21T10:42:17Z ERROR Internal server error
+2026-07-21T10:42:17Z INFO  Response sent: 500 Internal Server Error
 ```
 
 3. Reviewed the request body sent to the API and confirmed that the auth token in missing in the header.
@@ -40,12 +40,12 @@ Look up in logs, filter the results by project (API project in this case), and l
 Look up in the DB and check if there is any new customers that were added to the DB in the time frame of the issue.
 Compare how much new users were added compared to similar hours and days in the past.
 
-5. Created a Jira ticket to document the issue, evidence, investigation, and resolution. No escalation to the development team was needed because the issue was caused by an incomplete request headers.
+5. Created a high-priority Jira ticket to document the issue, affected customers, impact, request details, and server-log evidence. Escalated the issue to the development or infrastructure team because it was a server-side failure.
 
-6. Added Authorization: Bearer wf_api_2026_7f8a9c2d_debugkey to the Headers of the API request.
+6. Shared the log evidence showing that the API could not connect to the database while processing the Create User request.
 
-7. No need to resend the request. Create a Jira to add a clear message for the user.
-   
-8. Left a comment in the Jira about the fix and close the Jira.
+7. After the database connection issue was resolved, sent a valid test request and verified that the API returned `201 Created`. Reprocessed only the requests confirmed not to have created a user record.
+
+8. Added a resolution comment to the Jira ticket, documented the server-side fix, and moved the ticket to the resolved status.
 
 
