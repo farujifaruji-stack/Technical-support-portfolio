@@ -1,6 +1,3 @@
-### `README.md` — Get Users
-
-````md
 # Get Users API
 
 Retrieves a list of user records.
@@ -63,4 +60,3 @@ This endpoint is used to retrieve all available user records.
 ## Postman location
 
 `Get Users`
-````
