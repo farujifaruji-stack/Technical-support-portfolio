@@ -1,6 +1,3 @@
-### `README.md` — Update User
-
-````md
 # Update User API
 
 Updates an existing user record using the user ID.
@@ -76,4 +73,3 @@ This endpoint is used to update the details of an existing user record.
 ## Postman location
 
 `Update User`
-````
