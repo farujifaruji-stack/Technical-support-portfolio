@@ -1,0 +1,29 @@
+2026-08-17T10:43:42.018Z INFO  Webhook received
+event_id=evt_100245 type=checkout.session.completed
+
+2026-08-17T10:43:42.025Z INFO  Webhook signature verified
+event_id=evt_100245
+
+2026-08-17T10:43:42.041Z INFO  Payment information extracted from webhook
+checkout_session_id=cs_test_100245 payment_intent_id=pi_test_100245 payment_status=paid
+
+2026-08-17T10:43:42.057Z INFO  Searching for payment record
+search_field=stripe_payment_id search_value=pi_test_100245
+
+2026-08-17T10:43:42.063Z WARN  No OrderPayments record found
+stripe_payment_id=pi_test_100245
+
+2026-08-17T10:43:42.071Z ERROR Unable to update order after successful payment
+event_id=evt_100245 order_id=unknown error="Payment record not found"
+
+2026-08-17T10:43:42.078Z INFO  Webhook response sent
+event_id=evt_100245 response_status=500
+
+2026-08-17T10:44:47.203Z INFO  Webhook retry received from Stripe
+event_id=evt_100245 attempt=2 type=checkout.session.completed
+
+2026-08-17T10:44:47.240Z ERROR Unable to update order after successful payment
+event_id=evt_100245 order_id=unknown error="Payment record not found"
+
+2026-08-17T10:44:47.248Z INFO  Webhook response sent
+event_id=evt_100245 response_status=500
