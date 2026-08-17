@@ -1,0 +1,11 @@
+2026-08-17T10:42:08.114Z INFO  Payment checkout requested
+order_id=ORD-100245 customer_id=CUS-30981 amount=4999 currency=usd
+
+2026-08-17T10:42:09.002Z INFO  Stripe Checkout Session created
+order_id=ORD-100245 checkout_session_id=cs_test_100245 payment_status=unpaid
+
+2026-08-17T10:42:09.114Z INFO  Order payment record created
+payment_id=PAY-800245 order_id=ORD-100245 checkout_session_id=cs_test_100245 status=Due
+
+2026-08-17T10:42:09.550Z INFO  Customer redirected to Stripe Checkout
+order_id=ORD-100245 flow_step=StripePending order_status=Pending
