@@ -1,0 +1,18 @@
+{
+  "id": "evt_payment_100245",
+  "type": "payment_intent.succeeded",
+  "created": "2026-08-17T10:43:40.000Z",
+  "data": {
+    "object": {
+      "id": "pi_test_100245",
+      "object": "payment_intent",
+      "amount": 4999,
+      "currency": "usd",
+      "status": "succeeded",
+      "latest_charge": "ch_test_100245",
+      "metadata": {
+        "order_id": "ORD-100245"
+      }
+    }
+  }
+}
