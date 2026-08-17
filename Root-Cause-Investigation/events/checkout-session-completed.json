@@ -1,0 +1,22 @@
+{
+  "id": "evt_100245",
+  "type": "checkout.session.completed",
+  "created": "2026-08-17T10:43:42.000Z",
+  "data": {
+    "object": {
+      "id": "cs_test_100245",
+      "object": "checkout.session",
+      "payment_status": "paid",
+      "status": "complete",
+      "amount_total": 4999,
+      "currency": "usd",
+      "payment_intent": "pi_test_100245",
+      "customer_details": {
+        "email": "customer@example.com"
+      },
+      "metadata": {
+        "order_id": "ORD-100245"
+      }
+    }
+  }
+}
